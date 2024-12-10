@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using VivaAerobus.Aplication.Log.Services;
-using VivaAerobus.Aplication.Log.Services.Impl;
 using System.Reflection;
+using VivaAerobus.Aplication.Booking.Services;
+using VivaAerobus.Aplication.Booking.Services.Impl;
 
 namespace VivaAerobus.Aplication.IoC
 {
@@ -16,7 +16,9 @@ namespace VivaAerobus.Aplication.IoC
 
         private static void AddServices(IServiceCollection services)
         {
-            _ = services.AddScoped<IGetLogsAppService, GetLogsAppService>();
+            _ = services.AddScoped<IGetBookingsAppService, GetBookingsAppService>();
+            _ = services.AddScoped<IGetBookingAppService, GetBookingAppService>();
+            _ = services.AddScoped<ICreateBookingAppService, CreateBookingAppService>();
         }
     }
 }
