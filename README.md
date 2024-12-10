@@ -5,3 +5,4 @@ This repository contains the projects with the DDD (Domain-Driven Design) for Vi
 - NET 8
 - MediatR
 - SeriLog
+- CQRS
